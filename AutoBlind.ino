@@ -51,7 +51,7 @@ void loop() {
   else {
     state = 0;
   }
-  if (state == 2) { // 500nit 이상 (직사광선)일시 블라인드 정방향 반닫힘
+  if (state == 2) { // 500lux 이상 (직사광선)일시 블라인드 정방향 반닫힘
     lcd.setCursor(0,1);
     lcd.print("HALF"); // 블라인드 상태 lcd 출력
     // 블라인드 각 제어
@@ -68,7 +68,7 @@ void loop() {
       }
     }
   } 
-  else if (state == 1) { // 200nit ~ 500nit (평상시) 블라인드 역방향 열림
+  else if (state == 1) { // 200lux ~ 500lux (평상시) 블라인드 역방향 열림
     lcd.setCursor(0,1);
     lcd.print("OPEN"); // 블라인드 상태 lcd 출력
     // 블라인드 각 제어
@@ -77,7 +77,7 @@ void loop() {
       delay(30);
     }
   } 
-  else if (state == 0) { // 200nit 이하 (어두움) 블라인드 완전 닫힘
+  else if (state == 0) { // 200lux 이하 (어두움) 블라인드 완전 닫힘
     lcd.setCursor(0,1);
     lcd.print("CLOSE"); // 블라인드 상태 lcd 출력
     // 블라인드 각 제어
